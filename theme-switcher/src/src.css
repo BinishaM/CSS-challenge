@@ -1,0 +1,247 @@
+html[data-theme = 'light']{
+    --bg: #f5f6f7;
+    --color-text:#9c9c9c;
+    --color-shadow: -4px -2px 4px 0px #ffffff,
+                4px 2px 6px 0px $dfe4ea;
+    --box-color:#e1e2e3;
+    --number-color:black;
+    --hover-color: #bdbbbb;
+    --hover-text:#4f4f4f;
+
+}
+html[data-theme = 'dark']{
+    --bg: #131419;
+    --color-text:#9c9c9c;
+    --color-shadow: -3px -3px 20px rgba(255,255,255,0.05),
+                3px 3px 15px rgba(0,0,0,0.5);
+    --box-color:#18202e;
+    --number-color:white;
+    --hover-color:#494b4d;
+    --hover-text:#c7c7c7;
+}
+
+body{
+    background: var(--bg);
+    color: var(--color-text);
+}
+.container{
+    margin: 60px 100px;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.social-media-dashboard{
+    
+    float:left;
+}
+.title{
+    font-size:32px;
+    font-weight:bold;
+    margin-top: 0px;
+    margin-bottom:5px;
+    color:var(--number-color);
+}
+.followers{
+    margin-top:5px;
+}
+#theme_type{
+    float:right;
+    padding-right:10px;
+   
+}
+.box{
+    float:right;
+    padding-right:50px;
+    padding-top:15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    /* background-color: #2196F3; */
+    background-image: linear-gradient(120deg,blue,aqua, green);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+    box-sizing: border-box;
+   
+}
+.column, .column1{
+    width:22%;
+    height:200px;
+    background-color: var(--box-color);
+    margin:5px 15px;
+    border-radius:7px;
+    align-content: center;
+}
+.facebook{
+    border-top:2px solid #3b5998;
+}
+.instagram{
+    border-top: 2px solid;
+    border-image:linear-gradient(120deg,rgb(204, 91, 204),orange,red ,pink,purple)9;
+}
+    
+
+.twitter{
+    border-top:2px solid #1DA1F2;
+}
+.youtube{
+    border-top:2px solid red;
+}
+.account{
+    margin-top:20px;
+   text-align:center;
+}
+.today{
+    color:rgb(6, 180, 113);
+    font-size:12px;
+    margin-top:30px;
+}
+.number{
+    font-size:42px; 
+    font-weight:bold;
+    color:var(--number-color);
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.column1{
+    box-sizing: border-box;
+    height:100px;
+    padding: 5px 20px;
+    padding-right:10px;
+}
+.column:hover, .column1:hover{
+    background-color:var(--hover-color);
+    color: var(--hover-text);
+    cursor: pointer;
+}
+
+.left{
+    float:left;
+
+}
+.right{
+    float:right;
+    PADDING-top:10px;
+    font-size:12px;
+}
+.increase{
+    color:green;
+}
+.decrease{
+    color:red;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (max-width:600px){
+    .container{
+        margin: 25px 40px;
+    }
+    .social-media-dashboard{
+        width:100%;
+    }
+    
+    #theme_type{
+        float:left;
+        padding-right:10px;
+       
+    }
+    .box{
+        float:right;
+        padding-right:50px;
+        padding-top:15px;
+    }
+    .column, .column1{
+        width:100%;
+        height:150px;
+        background-color: var(--box-color);
+        margin-top:10px;
+
+        border-radius:7px;
+        align-content: center;
+        margin-left:0px;
+    }
+    .column1{
+       
+        height:100px;
+        width:90%;
+        padding:10px 30px;
+    }
+    .number{
+        font-size:32px;
+    }
+    .today{ font-size:10px; 
+        margin-top:5px;}
+    .account{font-size:12px;}
+
+    
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme= 'light'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href="src.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='container'>
+        <div class="dashboard">
+            <div class="social-media-dashboard">
+                <p class="title">Social Media Dashboard</p>
+                <p class="followers">Total followers: 23,004</p>
+            </div>
+            <div class="box">
+                <!-- <input type = 'checkbox' name="theme"> -->
+                <label class="switch">
+                    
+                    <input type = 'checkbox' name="theme">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+            <p id = "theme_type">Dark Mode</p>
+        </div>
+        <div class="row">
+            <div class="column facebook" style="margin-left:0px;">
+                <div class='account'>
+                    <img src= '../images/icon-facebook.svg'>
+                    abcd
+                    <p class="number">1998</p>
+                    FOLLOWERS
+                    <p class="today"><img src="../images/icon-up.svg">&nbsp1 Today</p>
+                </div>
+            </div>
+            <div class="column instagram">
+                <div class='account'>
+                    <img src= '../images/icon-instagram.svg'>
+                    @abcd
+                    <p class="number">2014</p>
+                    FOLLOWERS
+                    <p class="today"><img src="../images/icon-up.svg">&nbsp11 Today</p>
+                </div>
+            </div>
+            <div class="column twitter">
+                <div class='account'>
+                    <img src= '../images/icon-twitter.svg'>
+                    abcd
+                    <p class="number">2016</p>
+                    FOLLOWERS
+                    <p class="today"><img src="../images/icon-up.svg">&nbsp111 Today</p>
+                </div>
+            </div>
+            <div class="column youtube">
+                <div class='account'>
+                    <img src= '../images/icon-youtube.svg'>
+                    abcd
+                    <p class="number">2020</p>
+                    SUBSCRIBERS
+                    <p class="today"><img src="../images/icon-up.svg">&nbsp 1111 Today</p>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="overview"><p class="title">Overview</p>
+            <div class='row'>
+                <div class="column1" style="margin-left:0px;">
+                    <div class="left">
+                        Page View
+                        <div class="number">87</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-facebook.svg">
+                        <br><br><br>
+                       <div class="increase">
+                           <img src="../images/icon-up.svg">
+                        1%
+                       </div> 
+                    </div>
+                </div>
+                <div class="column1" >
+                    <div class="left">
+                        Likes
+                        <div class="number">100</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-facebook.svg">
+                        <br><br><br>
+                       <div class="decrease">
+                           <img src="../images/icon-down.svg">
+                        3%
+                       </div> 
+                    </div>
+                </div>
+                <div class="column1" >
+                    <div class="left">
+                        Likes
+                        <div class="number">877</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-instagram.svg">
+                        <br><br><br>
+                       <div class="increase">
+                           <img src="../images/icon-up.svg">
+                        12%
+                       </div> 
+                    </div>
+                </div>
+                <div class="column1" >
+                    <div class="left">
+                        Profile Views
+                        <div class="number">101</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-instagram.svg">
+                        <br><br><br>
+                       <div class="increase">
+                           <img src="../images/icon-up.svg">
+                        17%
+                       </div> 
+                    </div>
+                </div>
+                    
+            </div>
+            <div class='row'>
+                <div class="column1" style="margin-left:0px;">
+                    <div class="left">
+                        Retweets
+                        <div class="number">117</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-twitter.svg">
+                        <br><br><br>
+                       <div class="increase">
+                           <img src="../images/icon-up.svg">
+                        7%
+                       </div> 
+                    </div>
+                </div>
+                <div class="column1" >
+                    <div class="left">
+                        Likes
+                        <div class="number">191</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-twitter.svg">
+                        <br><br><br>
+                       <div class="decrease">
+                           <img src="../images/icon-down.svg">
+                        23%
+                       </div> 
+                    </div>
+                </div>
+                <div class="column1" >
+                    <div class="left">
+                        Likes
+                        <div class="number">1001</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-youtube.svg">
+                        <br><br><br>
+                       <div class="increase">
+                           <img src="../images/icon-down.svg">
+                        12%
+                       </div> 
+                    </div>
+                </div>
+                <div class="column1" >
+                    <div class="left">
+                        Total Views
+                        <div class="number">1101</div>
+                    </div>
+                    <div class="right">
+                        <img src="../images/icon-youtube.svg">
+                        <br><br><br>
+                       <div class="increase">
+                           <img src="../images/icon-up.svg">
+                        17%
+                       </div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+    
+<script>
+    let checkbox = document.querySelector('input[name= theme]');
+    
+    checkbox.addEventListener('change',function(){
+        if(this.checked){
+            document.documentElement.setAttribute('data-theme', 'dark');
+            // document.getElementById("theme_type").innerHTML = "Light Mode";
+        }else{
+            document.documentElement.setAttribute('data-theme', 'light');
+            // document.getElementById("theme_type").innerHTML = "Dark Mode";
+        }
+    })
+</script>
+</body>
+</html>
